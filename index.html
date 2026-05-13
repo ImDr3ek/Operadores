@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Dev Mastery - Diego Edition</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <nav id="sidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="toggleNav()">&times;</a>
+        <div class="sidebar-content">
+            <h2>Fale Comigo</h2>
+            <p>Envie uma mensagem direta para o meu e-mail acadêmico.</p>
+            
+            <form action="https://formspree.io/f/diego_guijarro@estudante.sesisenai.org.br" method="POST" id="contact-form">
+                <div class="form-group">
+                    <label>Seu E-mail:</label>
+                    <input type="email" name="email" placeholder="exemplo@gmail.com" required>
+                </div>
+                <div class="form-group">
+                    <label>Mensagem:</label>
+                    <textarea name="message" rows="5" placeholder="Olá Diego, vamos programar?" required></textarea>
+                </div>
+                <button type="submit" class="send-btn">Enviar Mensagem</button>
+            </form>
+            <div id="status"></div>
+        </div>
+    </nav>
+
+    <button class="openbtn" onclick="toggleNav()">☰ Menu de Contato</button>
+
+    <div id="main-content">
+        <header class="main-header">
+            <h1>Enciclopédia de Operadores Web</h1>
+            <p>O guia definitivo para dominar a lógica visual e funcional.</p>
+        </header>
+
+        <section class="mega-section">
+            <h2>1. Operadores de Estrutura (HTML)</h2>
+            <p>No HTML, os operadores definem relações hierárquicas e comportamentais entre componentes.</p>
+            
+            <div class="op-grid">
+                <div class="op-card">
+                    <h3>Atribuição de Propriedades (<code>=</code>)</h3>
+                    <p>Conecta chaves a valores dentro das tags.</p>
+                    <code>&lt;img src="foto.jpg" alt="Descrição"&gt;</code>
+                </div>
+                <div class="op-card">
+                    <h3>Operador de Âncora (<code>#</code>)</h3>
+                    <p>Cria links internos para IDs específicos na mesma página.</p>
+                    <code>&lt;a href="#secao-contato"&gt;Pular para contato&lt;/a&gt;</code>
+                </div>
+                <div class="op-card">
+                    <h3>Operador Global (<code>*</code>)</h3>
+                    <p>Embora usado no CSS, no HTML ele é implícito em seletores de wildcard para scripts.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="mega-section">
+            <h2>2. Operadores de Estilo & Lógica (CSS)</h2>
+            <p>O CSS moderno utiliza operadores matemáticos e combinadores para layouts complexos.</p>
+            
+            <div class="op-grid">
+                <div class="op-card">
+                    <h3>Combinador de Irmãos (<code>~</code>)</h3>
+                    <p>Seleciona todos os elementos que são irmãos de um anterior.</p>
+                    <code>p ~ span { color: red; }</code>
+                </div>
+                <div class="op-card">
+                    <h3>Operador de Negação (<code>:not</code>)</h3>
+                    <p>Aplica estilos a tudo, exceto ao elemento especificado.</p>
+                    <code>div:not(.ativo) { opacity: 0.5; }</code>
+                </div>
+                <div class="op-card">
+                    <h3>Função Matemática (<code>min/max</code>)</h3>
+                    <p>Operadores de comparação para responsividade fluida.</p>
+                    <code>font-size: clamp(1rem, 5vw, 3rem);</code>
+                </div>
+            </div>
+        </section>
+
+        <section class="mega-section">
+            <h2>3. Operadores de Programação (JavaScript)</h2>
+            <p>A lógica computacional pura que dita as regras do sistema.</p>
+            
+            <div class="op-grid">
+                <div class="op-card">
+                    <h3>Nullish Coalescing (<code>??</code>)</h3>
+                    <p>Retorna o lado direito se o esquerdo for nulo ou indefinido.</p>
+                    <code>const nome = usuario ?? "Anônimo";</code>
+                </div>
+                <div class="op-card">
+                    <h3>Spread Operator (<code>...</code>)</h3>
+                    <p>Expande elementos de um array ou objeto.</p>
+                    <code>const novoArray = [...antigo, 4, 5];</code>
+                </div>
+                <div class="op-card">
+                    <h3>Strict Equality (<code>===</code>)</h3>
+                    <p>Compara valor e tipo, evitando bugs de tipagem.</p>
+                    <code>if (status === 200) { active(); }</code>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

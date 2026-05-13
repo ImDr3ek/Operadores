@@ -1,0 +1,123 @@
+:root {
+    --indigo-velvet: #3d348b;
+    --medium-slate-blue: #7678ed;
+    --amber-flame: #f7b801;
+    --tiger-orange: #f18701;
+    --cayenne-red: #f35b04;
+    --white: #ffffff;
+    --dark-glass: rgba(61, 52, 139, 0.95);
+}
+
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background: #f0f0f5;
+    color: var(--indigo-velvet);
+}
+
+/* Sidebar Estilizada */
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 2000;
+    top: 0;
+    left: 0;
+    background-color: var(--dark-glass);
+    backdrop-filter: blur(10px);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidebar-content {
+    padding: 30px;
+    color: white;
+}
+
+.sidebar h2 { color: var(--amber-flame); }
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label { display: block; margin-bottom: 5px; color: var(--amber-flame); }
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 5px;
+    border: none;
+    background: rgba(255,255,255,0.1);
+    color: white;
+    border-bottom: 2px solid var(--medium-slate-blue);
+}
+
+.send-btn {
+    background: var(--cayenne-red);
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    width: 100%;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.send-btn:hover { background: var(--tiger-orange); transform: scale(1.02); }
+
+/* Main Content */
+.main-header {
+    background: var(--indigo-velvet);
+    color: var(--white);
+    padding: 80px 20px;
+    text-align: center;
+    border-bottom: 10px solid var(--tiger-orange);
+}
+
+.mega-section {
+    max-width: 1100px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+.op-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.op-card {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    border-top: 5px solid var(--cayenne-red);
+}
+
+code {
+    display: block;
+    background: #282c34;
+    color: #abb2bf;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 15px;
+    font-size: 0.9rem;
+}
+
+.openbtn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: var(--cayenne-red);
+    color: white;
+    padding: 15px 25px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: bold;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    z-index: 100;
+}
