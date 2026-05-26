@@ -312,23 +312,48 @@ document.getElementById('contabilizador').addEventListener("keyup", tratarTecla)
     
 }
 
-let valorTotalRecebido, valorRepasse, valorTotalFinal, totalSumado = 0
+let valorTotalRecebido, valorRepasse, valorTotalFinal, descontos,clientes = 0,
+ descontoParaSeguradoras = "desconto",descontoresposta
 function  lancarCliente(){
+    clientes ++
     valorTotalRecebido = Number(document.getElementById("barraLancar").value)
-    totalSumado = totalSumado + valorTotalRecebido 
-    valorTotalRecebido = totalSumado
-    valorRepasse =  valorTotalRecebido * 0.10
-    valorTotalFinal = valorTotalRecebido - valorRepasse
+    descontoParaSeguradoras = document.getElementById("descontoSeguradora").value
+    valorRepasse =  Number(Math.ceil(valorTotalRecebido * 0.10)).toFixed(2)
+    valorTotalFinal = Number(Math.ceil(valorTotalRecebido - valorRepasse)).toFixed(2)
     document.getElementById("valorRecebido").innerHTML = "Valor recebido: R$" +valorTotalRecebido
     document.getElementById("valorDoRepasse").innerHTML = "Valor do Repasse: R$" +valorRepasse
     document.getElementById("valorTotalFinal").innerHTML = "Lucro Total: R$" + valorTotalFinal
-    document.getElementById('barraLancar').focus()
-}
-
-    function tratarTecla2(e){
-        // console.log(e)
-        if(e.key == "Enter"){
-            lancarCliente()
+    document.getElementById("clientela").innerHTML = "Clientes: " + clientes
+    
+    document.getElementById("desconteSeguradora").innerHTML = ""
+    document.getElementById("descontoresposta").innerHTML = ""
+    
+    if(descontoParaSeguradoras != ''){
+        if(descontoParaSeguradoras == "desconto"){
+            
+            clientes = clientes * 0
+            descontos = valorTotalFinal * 0.30
+            valorTotalFinal = Number(Math.ceil(valorTotalFinal - descontos)).toFixed(2)
+            document.getElementById("valorTotalFinal").innerHTML = "Lucro Total: R$" + valorTotalFinal
+            document.getElementById("valorDoRepasse").innerHTML = "Valor do Repasse: -"
+            document.getElementById("desconteSeguradora").innerHTML = "Valor com 30% de desconto para aseguradoras: R$" + valorTotalFinal
+            document.getElementById("descontoresposta").innerHTML = "codigo aceito"
+            
+        }else if(descontoParaSeguradoras != "descontoparaseguradoras"){
+            document.getElementById("descontoresposta").innerHTML = "codigo não existe, tenta de novo"
         }
+
     }
-    document.getElementById('barraLancar').addEventListener("keyup", tratarTecla2)
+
+     if(clientes == 10){
+        descontos = valorTotalFinal * 0.05
+        valorTotalFinal = valorTotalFinal - descontos
+        document.getElementById("desconte").innerHTML = "Valor com 5% de desconto: R$" + valorTotalFinal
+    }
+    else if(clientes > 10){
+        clientes = 1
+        document.getElementById("desconte").innerHTML = " "
+        
+    }
+    // document.getElementById('barraLancar').focus()
+}
