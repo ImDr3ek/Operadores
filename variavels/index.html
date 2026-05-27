@@ -3,78 +3,116 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="style.css">
     <title>Var</title>
 </head>
 <body>
+    <div class="topttl" id="TopTitulo">
+        <section class="tela ativa" id="tela"></section>
+        <h1>Operadores & Variaveis</h1>
+        <h2>pase a pagina para o seguinte desafio</h2>
+    </div>
+     <hr>
 
-  
+     <div class="btns-pagina">
+         <button onclick="telaAnterior()"><-</button>
+         <button onclick="telaProxima()">-></button>
+        </div>
+   
+        <div id="dinos"> 
+<section class="tela" id="tela1">
+
+    <br>
     <input type="text" id="barraAposta">
-    <button onclick="apostar()">Apostar</button>
-    <br>
-    <button onclick="espinossauro()">Espinossauro</button>
-    <button onclick="tRex()">T-rex</button>
-    <button onclick="branquiossauro()">Branquiossauro</button>
-    <button onclick="velocirraptor()">Velocirraptor</button>
-    <button onclick="estegossauro()">Estegossauro</button>
-    <button onclick="triceratopo()">Triceratopo</button>
-    <button onclick="anquilossauro()">Anquilossauro</button>
-    <button onclick="parassauroloio()">Parassauro</button>
-    <button onclick="alessauro()">Alossauro</button>
-    <button onclick="carnotouro()">Carnotouro</button>
-    <br>
-    <output id ="dinheiro">R$</output>
-    <br>
-    <output id ="dino">Dinossauro escolhido:</output>
-    <br>
-    <output id ="dino_sorte">Dinossauro sorteado:</output>
-    <hr>
+            <button onclick="apostar()">Apostar</button>
+            <br>
+            <button onclick="espinossauro()">Espinossauro</button>
+            <button onclick="tRex()">T-rex</button>
+            <button onclick="branquiossauro()">Branquiossauro</button>
+            <button onclick="velocirraptor()">Velocirraptor</button>
+            <button onclick="estegossauro()">Estegossauro</button>
+            <button onclick="triceratopo()">Triceratopo</button>
+            <button onclick="anquilossauro()">Anquilossauro</button>
+            <button onclick="parassauroloio()">Parassauro</button>
+            <button onclick="alessauro()">Alossauro</button>
+            <button onclick="carnotouro()">Carnotouro</button>
+            <br>
+            <output id ="dinheiro">R$</output>
+            <br>
+            <output id ="dino">Dinossauro escolhido:</output>
+            <br>
+            <output id ="dino_sorte">Dinossauro sorteado:</output>
+            <hr>
+        </section>
+        </div>
+
+        <div id="recibodaloja">
+<section class="tela" id="tela2">
 
     <input type="text" id="barraLancar">
     <button onclick="lancarCliente()">Lançar</button>
-    <br>
-    <h3>Codido de desconto para seguradoras</h3>
-    <input type="text" name="" id="descontoSeguradora">
-    <output id="descontoresposta"></output>
-    <br>
-    <output id="valorRecebido">Valor recebido: R$</output>
-    <br>
-    <output id="valorDoRepasse">Valor do Repasse: R$</output>
-    <br>
-    <output id="valorTotalFinal">Lucro Total: R$</output>
-    <br>
-    <output id="clientela">Clientes: 0</output>
-    <br>
+            <br>
+            <h3>Codido de desconto para seguradoras</h3>
+            <input type="text" name="" id="descontoSeguradora">
+            <output id="descontoresposta"></output>
+            <br>
+            <output id="valorRecebido">Valor recebido: R$</output>
+            <br>
+            <output id="valorDoRepasse">Valor do Repasse: R$</output>
+            <br>
+            <output id="valorTotalFinal">Lucro Total: R$</output>
+            <br>
+            <output id="clientela">Clientes: 0</output>
+            <br>
     <output id="desconteSeguradora"></output>
     <output id="desconte"></output>
+    
+</section>
+      </div>
 
+<div id="contagemsimples">
+<section class="tela" id="tela3">
 
-
-<hr>
+    <hr>
     <h1>Variaveis</h1>
-emmet vs code
+    emmet vs code
     <hr>
     <button onclick="implementarContagem()">+</button>
     <button onclick="diminuirContagem()">-</button>
     <button onclick="resetContagem()">reload</button>
     <p id="p-contagem">0</p>
     <hr>
-<h2>Pepe</h2>
+</section>
+</div>
+
+<div id="harrypotter">
+<section class="tela" id="tela4">
+
+    <h2>Pepe</h2>
     <input type="text" id="contabilizador">
     <button onclick="registrarVenda()">Cadastrar</button>
     <p id="totalVendido">Total De Vendas: R$</p>
-   <div id="listaVendas"></div>
-   
-   <hr>
-   <button onclick="rodarDadod4()">Rolar Dado d4</button>
-   <button onclick="rodarDadod6()">Rolar Dado d6</button>
-   <button onclick="rodarDadod10()">Rolar Dado d10</button>
-   <button onclick="rodarDadod12()">Rolar Dado d12</button>
-   <h2>Numero Do dado: </h2>
-   <output id="numeroDoDado"></output>
-   <h2>Numeros pasados: </h2>
-   <div id="listaDeDados"></div>
-   <h2 id="totalNumero"> Numero Total: </h2>
-   
+    <div id="listaVendas"></div>
+    
+</section>
+</div>
+
+<div id="dadorolado">
+<section class="tela" id="tela5">
+
+    <hr>
+    <button onclick="rodarDadod4()">Rolar Dado d4</button>
+    <button onclick="rodarDadod6()">Rolar Dado d6</button>
+    <button onclick="rodarDadod10()">Rolar Dado d10</button>
+    <button onclick="rodarDadod12()">Rolar Dado d12</button>
+    <h2>Numero Do dado: </h2>
+    <output id="numeroDoDado"></output>
+    <h2>Numeros pasados: </h2>
+    <div id="listaDeDados"></div>
+    <h2 id="totalNumero"> Numero Total: </h2>
+    
+</section>
+</div>
    <script src="script.js"></script>
 </body>
 </html>

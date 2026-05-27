@@ -1,3 +1,40 @@
+const telas = document.querySelectorAll(".tela")
+let paginaAtual = 0
+function mostrarTela(index){
+telas.forEach(function(tela){
+    tela.classList.remove('ativa')
+});
+telas[index].classList.add('ativa')
+
+
+}
+
+function telaProxima(){
+
+    paginaAtual++;
+
+    if(paginaAtual >= telas.length){
+        paginaAtual = 0;
+    }
+
+    mostrarTela(paginaAtual);
+}
+
+function telaAnterior(){
+
+    paginaAtual--;
+
+    if(paginaAtual < 0){
+        paginaAtual = telas.length - 1;
+    }
+
+    mostrarTela(paginaAtual);
+}
+
+mostrarTela(0);
+
+ 
+
 let total = 0
 
 
@@ -357,3 +394,4 @@ function  lancarCliente(){
     }
     // document.getElementById('barraLancar').focus()
 }
+
