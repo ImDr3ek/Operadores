@@ -7,19 +7,19 @@
     <title>Var</title>
 </head>
 <body>
-    <div class="topttl" id="TopTitulo">
+  
+    <div class="principal">
         <section class="tela ativa" id="tela"></section>
         <h1>Operadores & Variaveis</h1>
-        <h2>pase a pagina para o seguinte desafio</h2>
     </div>
-     <hr>
 
-     <div class="btns-pagina">
-         <button onclick="telaAnterior()"><-</button>
-         <button onclick="telaProxima()">-></button>
-        </div>
-   
-        <div id="dinos"> 
+    <div class="buttonsprincipais">
+        <button onclick="reinicio()">Reiniciar</button>
+        <h3>pase a pagina para o seguinte desafio</h3>
+        <button onclick="telaProxima()" id="telaA">-></button>
+    <button onclick="telaAnterior()" id="telaB"><-</button>
+</div>
+       
 <section class="tela" id="tela1">
 
     <br>
@@ -44,9 +44,7 @@
             <output id ="dino_sorte">Dinossauro sorteado:</output>
             <hr>
         </section>
-        </div>
 
-        <div id="recibodaloja">
 <section class="tela" id="tela2">
 
     <input type="text" id="barraLancar">
@@ -68,9 +66,7 @@
     <output id="desconte"></output>
     
 </section>
-      </div>
 
-<div id="contagemsimples">
 <section class="tela" id="tela3">
 
     <hr>
@@ -83,9 +79,7 @@
     <p id="p-contagem">0</p>
     <hr>
 </section>
-</div>
 
-<div id="harrypotter">
 <section class="tela" id="tela4">
 
     <h2>Pepe</h2>
@@ -95,11 +89,8 @@
     <div id="listaVendas"></div>
     
 </section>
-</div>
 
-<div id="dadorolado">
 <section class="tela" id="tela5">
-
     <hr>
     <button onclick="rodarDadod4()">Rolar Dado d4</button>
     <button onclick="rodarDadod6()">Rolar Dado d6</button>
@@ -112,7 +103,6 @@
     <h2 id="totalNumero"> Numero Total: </h2>
     
 </section>
-</div>
    <script src="script.js"></script>
 </body>
 </html>

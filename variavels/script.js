@@ -1,3 +1,6 @@
+function reinicio(){
+    window.location.reload()
+}
 const telas = document.querySelectorAll(".tela")
 let paginaAtual = 0
 function mostrarTela(index){

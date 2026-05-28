@@ -6,3 +6,39 @@
     display: block;
 
 }
+
+.buttonsprincipais{
+     width: fit-content;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    
+}
+.principal{
+     width: fit-content;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    border-bottom-style:ridge ;
+    
+}
+
+button{
+    margin: 0 10px;
+    padding: 5.5px 10px;
+    cursor: pointer;
+}
+button:hover{
+    background-color: #69021c;
+    scale: 1.00;
+    border-radius: 7px;
+}
+
+#telaA{
+    margin-bottom: 5px;
+}
+#telaB{
+    margin-top: 5px;
+}
