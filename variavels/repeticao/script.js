@@ -97,24 +97,82 @@ function exer7(){
 // function exer8(){
     
 // }
-// function exer9(){
-    
-// }
-// function exer10(){
-    
-// }
-// function exer11(){
-    
-// }
-// function exer12(){
+function exer9(){
+       let contador = 0
+    while(contador < 100){
+        contador++
+        
+    if(contador%5 == 0 && contador%3 == 0){
+            alert("fizzbuzz " + contador)
+        }
+    else if(contador%3 == 0){
+        alert("fizz " + contador)
+    }
+    else if(contador%5 == 0){
+        alert("buzz " + contador)
+    }
 
-// }
-// function exer13(){
+    else{
+        alert(contador)
+    }
+    }
+}
+function exer10(){
+    let i = 0
+    let total = 0
+    while(i < 10){
+        i++
+        total = total + (1/i)
+        alert(total)
+    }
 
-// }
-// function exer14(){
+}
+function exer11(){
+     let contador = 0
+    let par = 0
+    let impar = 0 
+    let valor = 0
+    valor = Number(prompt("Quanto?"))
+    while(contador < valor){
+        contador++
+        
+    if(contador%2 == 0){
+        par++
+        alert("tem par: " + par + " em contador: " + contador)
+    }
+    else{
+        impar++
+        alert(" tem impar: " + impar + " em contador: " + contador)
+    }
+}
+}
+function exer12(){
+let lista = 0
+let valormaior
+let valormenor
+lista = Number(prompt("Da um numero com mais de 2 cifras"))
+while(lista <= lista){
+    valormaior = lista - 1
+    valormenor = (lista - lista) + 1
+    alert("valor menor: " + valormenor)
+    alert("valor menor: " + valormaior)
+}
 
-// }
-// function exer15(){
+}
+function exer13(){
+let lista = 0
+let lista2 = 0
+let resultado
+lista = Number(prompt('lista 1'))
+lista2 = Number(prompt('lista 2'))
+while(lista <= lista){
+    resultado = (lista + lista2) / 2
+    alert("a media entre a lista 1 e a 2 é de: " + resultado)
+}
+}
+function exer14(){
 
-// }
+}
+function exer15(){
+
+}
