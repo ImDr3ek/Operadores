@@ -11,3 +11,9 @@
     align-items: center;
     flex-wrap: wrap;
 }
+
+.produtos:hover{
+    scale: 1.05;
+    border-radius: 7px;
+
+}
