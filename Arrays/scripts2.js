@@ -44,14 +44,18 @@ function ativarProdutos() {
 function agregarNoCarrinho(p) {
 
 
-    // alert('produto ' + produtos[p] + " valor " + precos[p])
-    // console.log("esse é o p " + precos[p]) 
+    
     let valor = precos[p];
     console.log("valor " + valor);
     total = total + valor;
     console.log("Valor total:" + total);
     document.getElementById('totalVendido').innerHTML = 'Total de vendas: R$' + total.toFixed(2);
-    document.getElementById('listaVendas').innerHTML += 'produto:' + produtos[p] +
+    document.getElementById('listaVendas').innerHTML += 'produto:' + produtos[p] + " " + "R$" + precos[p] +
     '<br>'
     document.getElementById('listaVendas').value = ''
 }
+
+// function removerProdutos(){
+//     let i = produtos.indexOf(prompt('Qual produto quer remover'))
+//     produtos.splice(i,1)
+// }
