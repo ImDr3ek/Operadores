@@ -1,7 +1,4 @@
-// let idade = [18,20,12,35,15,14]
-// let precos = []
 let total = 0;
-//let i = 0
 const produtos = [
     { id: 0, nome: "Notebook", preco: 4500.00 },
     { id: 1, nome: "Mouse", preco: 150.00 },
@@ -59,14 +56,12 @@ const produtos = [
 function ativarProdutos() {
     document.getElementById('lista-precos').innerHTML = ''
     for (let i = 0; i < produtos.length; i++) {
-        // console.log(produtos[i])
-        document.getElementById('lista-precos').innerHTML += '<button  onclick= "agregarNoCarrinho(' + produtos[i].id + ')" class="produtos" id="p' + produtos[i].id + '"> ' + produtos[i].nome + '</button>'
-        // j = Math.ceil(Math.random() * 1400)
-        // precos.push(j)
-
+        document.getElementById('lista-precos').innerHTML += '<button  onclick= "agregarNoCarrinho(' + 
+        produtos[i].id + ')" class="produtos" id="p' + produtos[i].id + 
+        '"> ' + produtos[i].nome + '</button>'
     }
     console.log(produtos)
-    // console.log(precos)
+
 }
 
 
@@ -83,9 +78,9 @@ function agregarNoCarrinho(id) {
     
 }
 
-// function removerProdutos(){
-//     let i = produtos.indexOf(prompt('Qual produto quer remover'))
-//     produtos.splice(i,1)
-// }
+function removerProdutos(){
+    let i = produtos.indexOf(prompt('Qual produto quer remover'))
+    produtos.splice(i,1)
+}
 
 
