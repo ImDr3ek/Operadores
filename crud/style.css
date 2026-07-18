@@ -1,0 +1,69 @@
+:root {
+  /* ==========================================
+     Paleta "Era Vulcânica & Fósseis"
+     ========================================== */
+
+  /* Tons Neutros (Fundos, Cartões e Textos) */
+  --dino-osso: #F9F6F0;       /* Branco off-white quente para fundos claros */
+  --dino-areia: #E2D7C1;      /* Bege acinzentado para cartões ou seções secundárias */
+  --dino-pedra: #4A4746;      /* Cinza rochoso para textos secundários */
+  --dino-obsidiana: #1C1A1A;  /* Preto carvão para fundos escuros ou textos principais */
+
+  /* Cores de Destaque (Botões, Links, Preços e Ícones) */
+  --dino-ambar: #F39C12;      /* Amarelo-laranja vibrante (fóssil em âmbar) */
+  --dino-terracota: #D35400;  /* Laranja terroso (barro/argila de escavação) */
+  --dino-magma: #C0392B;      /* Vermelho escuro/vulânico para alertas ou call-to-action */
+
+  /* Sombras para profundidade das miniaturas */
+  --dino-sombra-leve: rgba(28, 26, 26, 0.1);
+  --dino-sombra-forte: rgba(28, 26, 26, 0.4);
+}
+
+body{
+    background-color: var(--dino-osso);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-dino{
+    background-color: var(--dino-pedra);
+    color: var(--dino-osso);
+    width: 300px;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px var(--dino-obsidiana);
+}
+
+#painelDinos{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+    
+#form{
+    background-color: var(--dino-pedra);
+    width: 25%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+    padding: 25px;
+    border-radius: 10px;
+}
+
+.container-inputs{
+    background-color: var(--dino-areia);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}

@@ -30,8 +30,7 @@ if(novodino.nome == '' && novodino.altura == '' && novodino.cor == '' && novodin
     console.log(dinos);
 
     limparFormulario()
-    mostrarTodos()
-
+   mostrarTodos()
 }
 
 function limparFormulario(){
@@ -41,6 +40,7 @@ function limparFormulario(){
      document.getElementById('input-altura').value = ''
      document.getElementById('input-cor').value = ''
      document.getElementById('input-preco').value = ''
+     document.getElementById('input-id').value = ''
      
      
      
@@ -49,9 +49,57 @@ function limparFormulario(){
     
 function mostrarTodos(){
 document.getElementById('painelDinos').innerHTML = " "
-dinos
-for(let i = 0; i <= dinos.length; i++){
-    document.getElementById("painelDinos").innerHTML += dinos[i].nome + "<br>" 
+for(let i = 0; i < dinos.length; i++){
+    document.getElementById("painelDinos").innerHTML += `
+    <div class="card-dino">
+    <h2>${dinos[i].nome}</h2>
+    <p>altura: ${dinos[i].altura}</p>
+    <p>cor: ${dinos[i].cor}</p>
+    <p>custo: ${dinos[i].custo}</p>
+    <p>id: ${dinos[i].id}</p>
+    </div>
+    `
 }
 
+}
+
+function pesquisar(){
+    let nomeProcurar = document.getElementById('input-nome').value
+    for(let i = 0; i<dinos.length; i++)
+        if(nomeProcurar == dinos[i].nome ){
+            document.getElementById('input-altura').value = dinos[i].altura
+            document.getElementById('input-cor').value = dinos[i].cor
+            document.getElementById('input-preco').value = dinos[i].custo
+            document.getElementById('input-id').value = dinos[i].id
+
+        }
+        
+    }
+    
+    function salvarDino(){
+        let id = Number(document.getElementById('input-id').value)
+        for(let i = 0; i<dinos.length; i++)
+            if(id == dinos[i].id ){
+
+            dinos[i].nome = document.getElementById('input-nome').value
+            dinos[i].altura = document.getElementById('input-altura').value
+            dinos[i].cor = document.getElementById('input-cor').value  
+            dinos[i].custo = document.getElementById('input-preco').value 
+            dinos[i].id = document.getElementById('input-id').value 
+    
+            }
+
+mostrarTodos()
+limparFormulario()
+}
+
+function eliminarDino(){
+            let id = Number(document.getElementById('input-id').value)
+    for(let i = 0; i<dinos.length; i++)
+        if(id == dinos[i].id ){
+            dinos.splice(i, 1)
+
+            }
+            mostrarTodos()
+            limparFormulario()
 }

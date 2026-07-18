@@ -30,15 +30,22 @@
         <label for="">Preço</label>
         <input id="input-preco" type="text">
     </div>
+    <div class="container-inputs">
+        <label for="">ID</label>
+        <input id="input-id" type="text">
+    </div>
 
-<button onclick="cadastrarDino()">+</button>
+<button onclick="cadastrarDino()">➕</button>
+<button onclick="salvarDino()">💾</button>
+<button onclick="eliminarDino()">🗑️</button>
 </div>
 
-    <hr>
-    <hr>
-    <button onclick="mostrarTodos()">Mostrar todos os dinos</button>
-<hr>
-<hr>
+    <div id="button-Mos-Pes">
+        <button onclick="mostrarTodos()"></button>
+        <button onclick="pesquisar()">🔎</button>
+        
+    </div>
+
 <div id="painelDinos">
 </div>
     <script src="script.js"></script>
