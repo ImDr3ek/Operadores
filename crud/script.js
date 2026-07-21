@@ -7,8 +7,19 @@
 
 let dinos = []
 
+function salvarDados(){
+    localStorage.setItem(
+        'dinos', JSON.stringify(dinos)
+    )
+}
+
+function carregarDados(){
+   dinos = JSON.parse(localStorage.getItem('dinos'))
+}
 
 function cadastrarDino(){
+
+    carregarDados()
     const novodino = {
         id: Date.now(),
         nome: document.getElementById('input-nome').value,

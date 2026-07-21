@@ -1,6 +1,6 @@
 let total = 0;
 const produtos = [
-    { id: 0, nome: "Notebook", preco: 4500.00 },
+    { id: 0, nome: "Notebook", preco: 4500.00},
     { id: 1, nome: "Mouse", preco: 150.00 },
     { id: 2, nome: "Teclado", preco: 320.00 },
     { id: 3, nome: "Monitor", preco: 3900.00 },
